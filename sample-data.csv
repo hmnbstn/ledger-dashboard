@@ -1,0 +1,11 @@
+date,agence,canal,type,montant,statut,duree_traitement,client_id
+2026-04-15T09:23:00,Paris 9e,Guichet,Virement,1250.00,Validée,87,C00142
+2026-04-15T09:24:00,Lyon Part-Dieu,En ligne,Carte,45.20,Validée,12,C00567
+2026-04-15T09:30:00,Marseille Centre,Mobile,Virement,890.50,Validée,34,C00892
+2026-04-15T09:35:00,Paris 9e,ATM,Retrait,200.00,Validée,28,C00142
+2026-04-15T09:42:00,Lille Grand Place,Guichet,Dépôt,3500.00,Validée,156,C01234
+2026-04-15T10:01:00,Bordeaux Lac,En ligne,Prélèvement,89.99,Rejetée,5,C00321
+2026-04-15T10:15:00,Nantes Centre,Téléphone,Crédit,15000.00,En attente,420,C01567
+2026-04-15T10:23:00,Paris 9e,Guichet,Virement,2100.00,Validée,95,C00789
+2026-04-16T08:45:00,Toulouse Capitole,Mobile,Carte,67.30,Validée,8,C00234
+2026-04-16T09:12:00,Nice Etoile,En ligne,Virement,540.00,Validée,42,C00956

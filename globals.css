@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: #FBFAF7;
+    color: #0A0A0A;
+    font-feature-settings: 'ss01', 'cv11', 'tnum';
+  }
+
+  /* Tabular numbers everywhere on financial figures */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer components {
+  .grain-overlay {
+    position: relative;
+  }
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--grain);
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+  }
+
+  /* Hairline borders — the Apple touch */
+  .hairline {
+    border: 1px solid rgba(10, 10, 10, 0.08);
+  }
+  .hairline-b {
+    border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+  }
+  .hairline-t {
+    border-top: 1px solid rgba(10, 10, 10, 0.08);
+  }
+
+  /* Card with subtle elevation */
+  .card {
+    background: #FFFFFF;
+    border: 1px solid rgba(10, 10, 10, 0.06);
+    border-radius: 14px;
+    box-shadow: 
+      0 1px 2px rgba(10, 10, 10, 0.02),
+      0 4px 16px rgba(10, 10, 10, 0.025);
+  }
+
+  /* Dotted divider — print/financial feel */
+  .dotted-divider {
+    background-image: linear-gradient(to right, rgba(10,10,10,0.2) 33%, transparent 0%);
+    background-position: top;
+    background-size: 6px 1px;
+    background-repeat: repeat-x;
+    height: 1px;
+  }
+}
+
+/* Scrollbar refinements */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { 
+  background: rgba(10, 10, 10, 0.15); 
+  border-radius: 10px;
+  border: 2px solid #FBFAF7;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(10, 10, 10, 0.3); }
+
+/* Selection */
+::selection {
+  background: #0A0A0A;
+  color: #FBFAF7;
+}
